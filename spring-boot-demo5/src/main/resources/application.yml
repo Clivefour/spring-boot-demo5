@@ -1,0 +1,6 @@
+spring:
+  thymeleaf:
+    cache: false
+    encoding: utf-8
+  mvc:
+    static-path-pattern: /static/**
