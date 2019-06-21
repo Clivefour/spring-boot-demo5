@@ -1,8 +1,9 @@
 package com.clive.springbootdemo5.pojo;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Dep {
+public class Dep implements Serializable{
     private int id;
     private String name;
     private List<Emp> emps;

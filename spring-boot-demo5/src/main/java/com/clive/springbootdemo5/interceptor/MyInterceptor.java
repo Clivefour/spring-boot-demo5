@@ -11,12 +11,12 @@ public class MyInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object o) throws Exception {
-        //1.通过request对象来得到我们的session对象
-        String user = (String) request.getSession().getAttribute("user");
-        if (user == null) {
-            response.sendRedirect("/login");
-            return false;
-        }
+//        //1.通过request对象来得到我们的session对象
+//        String user = (String) request.getSession().getAttribute("user");
+//        if (user == null) {
+//            response.sendRedirect("/login");
+//            return false;
+//        }
         return true;
     }
 

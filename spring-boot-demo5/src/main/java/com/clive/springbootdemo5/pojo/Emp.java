@@ -1,9 +1,10 @@
 package com.clive.springbootdemo5.pojo;
 
+import java.io.Serializable;
 import java.util.Date;
 
 
-public class Emp {
+public class Emp implements Serializable{
     private int id;
     private String name;
     private double salary;

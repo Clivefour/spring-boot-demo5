@@ -2,5 +2,35 @@ spring:
   thymeleaf:
     cache: false
     encoding: utf-8
+
   mvc:
     static-path-pattern: /static/**
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/springboot?useUnicode=true&characterEncoding=gbk&useSSL=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Hongkong
+    type: com.alibaba.druid.pool.DruidDataSource
+
+
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+  redis:
+    host: 192.168.65.158
+  activemq:
+    broker-url: tcp://192.168.65.168:61616
+    in-memory: true
+    packages:
+      trust-all: false
+    #默认情况下activemq提供的是queue(点对点)模式，若要使用topic（订阅与发布）模式需要配置下面配置
+  jms:
+    pub-sub-domain: true
